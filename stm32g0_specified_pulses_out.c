@@ -4,7 +4,6 @@
   * @author  asadshafi
   * @brief   Description of the file.
   *
-  * @details Detailed description of the file, including purpose and usage.
   * This C file contains functions to generate a specific number of pulses using 
   * Timer 14 (TIM14) and Timer 3 (TIM3) peripherals on an STM32G030
   * microcontroller.
@@ -21,8 +20,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-uint16_t prescaler = 700 - 1; // Set prescaler for 1kHz clock
-uint16_t arr_value = 100 - 1; // Set auto-reload value for 1Hz frequency (1 pulse per second)
+uint16_t prescaler = 700 - 1; // Set prescaler for desired clock
+uint16_t arr_value = 100 - 1; // Set auto-reload value for desired frequency 
 uint16_t duty_cycle = 50;     // Set duty cycle to 50% (0-1000 represents 0-100%)
 /**
   * @brief  Initializes Timer 3 to count pulses.
