@@ -79,9 +79,8 @@ void TIM3_IRQHandler(void)
     if (TIM3->SR & TIM_SR_UIF)
     {
         // Pulse count reached, perform actions here
-        // TIM14->CR1 &= ~TIM_CR1_CEN;
+        TIM14->CR1 &= ~TIM_CR1_CEN;
 
-        GPIOA->ODR ^= (0x7f & ~sevenSegment[2]);
         TIM3->SR &= ~TIM_SR_UIF; // Clear update interrupt flag
     }
 }
